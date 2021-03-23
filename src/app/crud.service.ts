@@ -39,22 +39,22 @@ export class CrudService {
 
   create_Newemployee(Record)
   {
-    return this.fireService.collection('Employee').add(Record);
+    return this.fireService.collection('course').add(Record);
   }
 
   get_Allemployee()
   {
-    return this.fireService.collection('Employee').snapshotChanges();
+    return this.fireService.collection('course').snapshotChanges();
   }
 
   update_employee(recordid, record)
   {
-    this.fireService.doc('Employee/' + recordid).update(record);
+    this.fireService.doc('course/' + recordid).update(record);
   }
 
   delete_employee(record_id)
   {
-    this.fireService.doc('Employee/' + record_id).delete();
+    this.fireService.doc('course/' + record_id).delete();
   }
 
 }
