@@ -4,3 +4,12 @@
     {{item.name}}
   </li>  
 </ul>
+
+<ul>
+  <h1>Teams</h1>
+  <li *ngFor="let team of listOfTeams | async">
+    <span>{{team.team.name}}</span>
+    <span><img src="{{team.team.logo}}"></span>
+  </li>  
+</ul>
+<button (click)="postSubject()">Add subject</button>
